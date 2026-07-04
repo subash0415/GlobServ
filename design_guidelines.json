@@ -1,0 +1,171 @@
+{
+  "project_name": "GlobServ International Traders LLP",
+  "theme_and_archetype": {
+    "theme": "light",
+    "archetype": "4 (Swiss & High-Contrast - Industrial Variation)",
+    "description": "A serious, data-dense, industrial ingredient supplier aesthetic (e.g., Kerry, Naturex, DSM). Anchored on stark white with high-contrast text, heavy use of technical rules/dividers, and deep earth-tone accents. Avoids startup tropes, emojis, and playful animations."
+  },
+  "colors": {
+    "background": {
+      "primary": "#FFFFFF",
+      "secondary": "#F9FAFB",
+      "tertiary": "#F3F4F6"
+    },
+    "text": {
+      "primary": "#111827",
+      "secondary": "#4B5563",
+      "muted": "#6B7280"
+    },
+    "accent": {
+      "primary": "#166534",
+      "hover": "#14532D",
+      "muted": "#DCFCE7"
+    },
+    "border": {
+      "default": "#E5E7EB",
+      "dark": "#D1D5DB"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Chivo",
+      "body": "IBM Plex Sans",
+      "mono": "IBM Plex Mono"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-none text-gray-900",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900",
+      "h3": "text-xl sm:text-2xl font-semibold text-gray-900",
+      "h4": "text-lg sm:text-xl font-medium text-gray-900",
+      "body": "text-base leading-relaxed text-gray-700",
+      "small": "text-sm text-gray-500",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] text-gray-500"
+    },
+    "rules": [
+      "No Inter or generic sans for headings.",
+      "Strict left-alignment for dense content and data.",
+      "Use IBM Plex Mono for technical specifications and data table values."
+    ]
+  },
+  "spacing_and_layout": {
+    "system": "Generous Spacing (Tailwind Scale)",
+    "containers": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "sections": "py-16 sm:py-24",
+    "grid_patterns": {
+      "bento_technical": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-0 border-l border-t border-gray-200",
+      "items": "border-r border-b border-gray-200 p-6 or p-8"
+    },
+    "surface_strategy": "Grid Borders (Technical Look). Use border-collapse style layouts to expose the grid skeleton. No soft shadows."
+  },
+  "components": {
+    "cards": "Flat background, 1px subtle border (#E5E7EB), sharp corners (rounded-none or max rounded-sm), no shadow. On hover, slight border color darkening.",
+    "buttons": "Sharp corners (rounded-none), high contrast (bg-green-800 text-white), 1px solid border. Hover states explicitly set text color.",
+    "tables": "Dense, technical tables for product specifications. Use striped rows or 1px border. Monospace font for numerical data.",
+    "forms": "Shadcn inputs with sharp corners. Minimal styling, focus rings use accent color (focus:ring-green-800).",
+    "navigation": "Solid white background with a hard bottom border (border-gray-200). Sticky positioning, z-50.",
+    "icons": "Minimal use of icons. Prefer Phosphor Icons (sharp/regular) if necessary, but prioritize real photography."
+  },
+  "animations": {
+    "strategy": "Minimalist and Functional.",
+    "rules": [
+      "No playful animations, no bouncing, no parallax.",
+      "Use subtle opacity and color transitions for hover states.",
+      "Micro-interactions for feedback only."
+    ]
+  },
+  "media": {
+    "rules": [
+      "Real product photography over abstract icons.",
+      "No emojis.",
+      "Images should have a subtle 1px border if placed in a white background context.",
+      "Images must not exceed 80vh on mobile."
+    ],
+    "images": [
+      {
+        "category": "Product - Spirulina",
+        "url": "https://images.pexels.com/photos/13787646/pexels-photo-13787646.jpeg",
+        "description": "Green spirulina powder/beverage in natural packaging"
+      },
+      {
+        "category": "Product - Aloe Vera",
+        "url": "https://images.pexels.com/photos/33793906/pexels-photo-33793906.jpeg",
+        "description": "Aloe vera leaves close up texture"
+      },
+      {
+        "category": "Product - Vetiver Roots",
+        "url": "https://images.pexels.com/photos/17507324/pexels-photo-17507324.jpeg",
+        "description": "Detailed view of dry intertwined roots"
+      },
+      {
+        "category": "Product - Basmati Rice",
+        "url": "https://images.pexels.com/photos/36346840/pexels-photo-36346840.jpeg",
+        "description": "Uncooked white basmati rice grains"
+      },
+      {
+        "category": "Product - Chilli",
+        "url": "https://images.unsplash.com/photo-1602237514002-c2d8ae2da393?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxkcmllZCUyMHJlZCUyMGNoaWxsaXxlbnwwfHx8fDE3ODI3MjE0NzF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Dried red chilli lot"
+      },
+      {
+        "category": "Product - Turmeric",
+        "url": "https://images.pexels.com/photos/6220710/pexels-photo-6220710.jpeg",
+        "description": "Vibrant turmeric powder and root"
+      },
+      {
+        "category": "Export & Shipping Capabilities",
+        "url": "https://images.pexels.com/photos/20581299/pexels-photo-20581299.jpeg",
+        "description": "Cargo ship loaded with containers at commercial dock"
+      }
+    ]
+  },
+  "sections_required": [
+    {
+      "name": "Hero Section",
+      "details": "Company positioning: GlobServ International Traders LLP. Agricultural exporter from Tamil Nadu. Technical headline. Two CTAs (Explore Products, Request a Quote). Background should be clean white or light gray with a structured grid overlay."
+    },
+    {
+      "name": "About / Founders",
+      "details": "Founded April 2026 by Subash Saravanan & Madan Vignesh. Focus on direct sourcing and supply chain transparency."
+    },
+    {
+      "name": "Products Catalog & Tech Specs",
+      "details": "Detail cards for Spirulina, Aloe Vera, Vetiver (core) + Basmati, Chilli, Turmeric (optional). Each product must have a technical specification table (Moisture %, Protein %, Mesh size, Shelf life) using monospace font for data."
+    },
+    {
+      "name": "Process (How We Work)",
+      "details": "6 Steps: Enquiry -> Sample & Quote -> Confirmation -> Sourcing & Packing -> QC & Paperwork -> Shipping. Display as a structured, numbered grid or list. No timelines."
+    },
+    {
+      "name": "Packaging & Export Capabilities",
+      "details": "Container specs, ports, MOQ, bag sizes. Show the cargo ship image here. Strict tabular format."
+    },
+    {
+      "name": "Certifications & Compliance",
+      "details": "Grid of credentials: LLP, GSTIN, PAN, IEC, FSSAI, APEDA, LUT, ICEGATE. Use an exposed grid layout."
+    },
+    {
+      "name": "Inquiry / Quote Request Form",
+      "details": "Professional B2B form. Fields: Name, Company, Email, Phone, Product Interest, Order Type, Requirements."
+    },
+    {
+      "name": "Contact & Footer",
+      "details": "Registered address: No.171/2C1A, Abdullapuram, Ranipet, Tamil Nadu — 631102. Phone: +91 95852 18525. Email: globservtraders@gmail.com. Footer includes registration details."
+    },
+    {
+      "name": "Admin Dashboard",
+      "details": "Lightweight, functional view for managing inquiries, products, and settings."
+    }
+  ],
+  "accessibility_and_testing": {
+    "testid_convention": "All interactive and key informational elements MUST include a data-testid attribute (kebab-case, role-based).",
+    "contrast": "Ensure text meets APCA standards. Focus states must have higher contrast than default."
+  },
+  "instructions_to_main_agent": [
+    "Strictly avoid emojis, glassmorphism, floating cards, and particles.",
+    "Implement Shadcn/UI for components but customize them to remove soft radiuses and shadows. Use sharp edges.",
+    "Use pure HTML and Tailwind for complex grid layouts (like the technical exposed grid).",
+    "Ensure the application is mobile-first responsive.",
+    "Build standard .js (React) files, not .tsx.",
+    "Use Phosphor icons only when absolutely necessary; prefer text or real images."
+  ]
+}
