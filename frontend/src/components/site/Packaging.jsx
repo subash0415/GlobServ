@@ -4,7 +4,7 @@ export default function Packaging() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-5">
-            <div className="overline mb-4">Export Capabilities</div>
+            <div className="eyebrow mb-4">Export Capabilities</div>
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
               Packaging, container loading & <span className="text-green-800">port logistics</span>.
             </h2>
@@ -24,7 +24,7 @@ export default function Packaging() {
           <div className="lg:col-span-7">
             <div className="border border-gray-300">
               <div className="bg-gray-50 border-b border-gray-300 px-6 py-3">
-                <div className="overline">Container Load Reference</div>
+                <div className="eyebrow">Container Load Reference</div>
               </div>
               <table className="spec-table">
                 <thead>
@@ -64,7 +64,7 @@ export default function Packaging() {
 function PortCell({ k, v }) {
   return (
     <div className="grid-cell p-5">
-      <div className="overline mb-2">{k}</div>
+      <div className="eyebrow mb-2">{k}</div>
       <div className="font-mono text-sm font-semibold text-gray-900">{v}</div>
     </div>
   );

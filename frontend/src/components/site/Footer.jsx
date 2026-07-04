@@ -7,12 +7,16 @@ export default function Footer({ settings }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <div className="mb-6">
+            <div className="flex items-center gap-4 mb-6">
               <img
                 src="https://customer-assets.emergentagent.com/job_agro-trade-portal-3/artifacts/7yctdp0f_GlobServ%20Logo.png"
-                alt="GlobServ International Traders LLP"
-                className="h-16 w-auto object-contain bg-white px-3 py-2"
+                alt="GlobServ"
+                className="h-14 w-auto object-contain bg-white px-3 py-2"
               />
+              <div>
+                <div className="text-white font-bold tracking-tight">GlobServ International</div>
+                <div className="text-[10px] font-mono uppercase tracking-[0.18em] text-gray-500">Traders LLP</div>
+              </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed max-w-md">
               A registered LLP exporting Spirulina, Aloe Vera and Khus (Vetiver) roots from Tamil Nadu — with Basmati 1121, Chilli and Turmeric available on request.
@@ -20,7 +24,7 @@ export default function Footer({ settings }) {
           </div>
 
           <div>
-            <div className="overline text-gray-500 mb-4">Products</div>
+            <div className="eyebrow text-gray-500 mb-4">Products</div>
             <ul className="space-y-2 text-sm">
               <li><a href="#products" className="hover:text-white">Spirulina</a></li>
               <li><a href="#products" className="hover:text-white">Aloe Vera</a></li>
@@ -31,7 +35,7 @@ export default function Footer({ settings }) {
           </div>
 
           <div>
-            <div className="overline text-gray-500 mb-4">Contact</div>
+            <div className="eyebrow text-gray-500 mb-4">Contact</div>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>{s.address || "No.171/2C1A, Abdullapuram, Ranipet, Tamil Nadu — 631102"}</li>
               <li className="font-mono text-white">{s.whatsapp_number || "+91 95852 18525"}</li>

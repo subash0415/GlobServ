@@ -4,7 +4,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-4">
-            <span className="overline">Who We Are</span>
+            <span className="eyebrow">Who We Are</span>
             <h2 className="mt-4 text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
               Two friends. One idea.
               <br />
@@ -38,7 +38,7 @@ export default function About() {
 function Value({ k, v }) {
   return (
     <div className="border-r border-b border-gray-200 p-6">
-      <div className="overline mb-2 text-gray-900">{k}</div>
+      <div className="eyebrow mb-2 text-gray-900">{k}</div>
       <p className="text-sm text-gray-600 leading-relaxed">{v}</p>
     </div>
   );

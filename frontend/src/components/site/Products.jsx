@@ -27,7 +27,7 @@ export default function Products({ products = [] }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
           <div className="max-w-2xl">
-            <div className="overline mb-4">Our Catalog</div>
+            <div className="eyebrow mb-4">Our Catalog</div>
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
               A focused export range with <span className="text-green-800">technical depth</span>.
             </h2>
@@ -69,7 +69,7 @@ export default function Products({ products = [] }) {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="overline">
+                  <span className="eyebrow">
                     {p.category === "core" ? "Core Export" : "Optional"}
                   </span>
                   <span className="font-mono text-[11px] text-gray-500">{p.origin}</span>
@@ -93,7 +93,7 @@ export default function Products({ products = [] }) {
           <div className="mt-16 border border-gray-300" data-testid="product-detail-panel">
             <div className="border-b border-gray-300 bg-gray-50 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
               <div>
-                <div className="overline">Technical Datasheet</div>
+                <div className="eyebrow">Technical Datasheet</div>
                 <h3 className="text-2xl font-bold text-gray-900 mt-1">{active.name}</h3>
               </div>
               <button
@@ -106,7 +106,7 @@ export default function Products({ products = [] }) {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               <div className="p-6 lg:p-8 border-b lg:border-b-0 lg:border-r border-gray-300">
-                <div className="overline mb-4">Specifications</div>
+                <div className="eyebrow mb-4">Specifications</div>
                 <table className="spec-table">
                   <tbody>
                     {active.specs.map((s, i) => (
@@ -119,7 +119,7 @@ export default function Products({ products = [] }) {
                 </table>
               </div>
               <div className="p-6 lg:p-8">
-                <div className="overline mb-4">Packaging & Container</div>
+                <div className="eyebrow mb-4">Packaging & Container</div>
                 <ul className="space-y-3">
                   {active.packaging.map((p, i) => (
                     <li key={i} className="flex gap-3 text-sm text-gray-700 leading-relaxed border-b border-gray-200 pb-3 last:border-0">
@@ -132,11 +132,11 @@ export default function Products({ products = [] }) {
                 </ul>
                 <div className="mt-6 pt-6 border-t border-gray-200 grid grid-cols-2 gap-6">
                   <div>
-                    <div className="overline mb-1">MOQ</div>
+                    <div className="eyebrow mb-1">MOQ</div>
                     <div className="font-mono text-sm text-gray-900">{active.moq}</div>
                   </div>
                   <div>
-                    <div className="overline mb-1">Origin</div>
+                    <div className="eyebrow mb-1">Origin</div>
                     <div className="font-mono text-sm text-gray-900">{active.origin}</div>
                   </div>
                 </div>

@@ -59,18 +59,18 @@ function LoginView({ onLogin }) {
           <Link to="/" data-testid="back-home" className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
             <ArrowLeft className="h-4 w-4" /> Back to site
           </Link>
-          <span className="overline">GlobServ · Admin</span>
+          <span className="eyebrow">GlobServ · Admin</span>
         </div>
       </div>
       <div className="flex-1 flex items-center justify-center px-4 py-16">
         <form onSubmit={submit} className="w-full max-w-md border border-gray-300 bg-white p-8" data-testid="admin-login-form">
-          <div className="overline mb-3">Restricted Area</div>
+          <div className="eyebrow mb-3">Restricted Area</div>
           <h1 className="text-2xl font-bold text-gray-900 tracking-tight">Admin Login</h1>
           <p className="mt-2 text-sm text-gray-600">Enter your credentials to access the admin panel.</p>
 
           <div className="mt-8 space-y-5">
             <div>
-              <label className="overline mb-2 block">Email</label>
+              <label className="eyebrow mb-2 block">Email</label>
               <input
                 data-testid="login-email"
                 type="email"
@@ -81,7 +81,7 @@ function LoginView({ onLogin }) {
               />
             </div>
             <div>
-              <label className="overline mb-2 block">Password</label>
+              <label className="eyebrow mb-2 block">Password</label>
               <input
                 data-testid="login-password"
                 type="password"
@@ -143,7 +143,7 @@ function Dashboard({ admin, onLogout }) {
             </Link>
             <span className="h-6 w-px bg-gray-300" />
             <div>
-              <div className="overline">GlobServ Admin</div>
+              <div className="eyebrow">GlobServ Admin</div>
               <div className="text-sm font-semibold text-gray-900">{admin.email}</div>
             </div>
           </div>
@@ -194,7 +194,7 @@ function InquiriesTab({ inquiries, reload }) {
     <section data-testid="inquiries-tab">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <div className="overline">Customer Enquiries</div>
+          <div className="eyebrow">Customer Enquiries</div>
           <h2 className="text-xl font-bold text-gray-900 mt-1">{inquiries.length} total</h2>
         </div>
         {inquiries.length > 0 && (
@@ -244,7 +244,7 @@ function ProductsTab({ products, reload }) {
     <section data-testid="products-tab">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <div className="overline">Products Catalog</div>
+          <div className="eyebrow">Products Catalog</div>
           <h2 className="text-xl font-bold text-gray-900 mt-1">{products.length} products</h2>
         </div>
       </div>
@@ -252,7 +252,7 @@ function ProductsTab({ products, reload }) {
         {products.map((p) => (
           <div key={p.id} className="grid-cell p-6" data-testid={`admin-product-${p.slug}`}>
             <div className="flex items-start justify-between mb-2">
-              <span className="overline">{p.category === "core" ? "Core" : "Optional"}</span>
+              <span className="eyebrow">{p.category === "core" ? "Core" : "Optional"}</span>
               <span className="font-mono text-[10px] text-gray-500">order: {p.order_index}</span>
             </div>
             <h3 className="font-bold text-gray-900">{p.name}</h3>
@@ -289,7 +289,7 @@ function SettingsTab({ settings, reload }) {
 
   return (
     <section data-testid="settings-tab" className="max-w-2xl">
-      <div className="overline mb-2">Business Settings</div>
+      <div className="eyebrow mb-2">Business Settings</div>
       <h2 className="text-xl font-bold text-gray-900 mb-6">Update contact & business info</h2>
       <div className="space-y-5 border border-gray-300 p-6 bg-white">
         <SField label="WhatsApp / Phone" value={f.whatsapp_number} onChange={(v) => setF({...f, whatsapp_number: v})} testId="settings-whatsapp" />
@@ -308,7 +308,7 @@ function SettingsTab({ settings, reload }) {
 function SField({ label, value, onChange, testId, textarea }) {
   return (
     <div>
-      <label className="overline mb-2 block">{label}</label>
+      <label className="eyebrow mb-2 block">{label}</label>
       {textarea ? (
         <textarea data-testid={testId} value={value || ""} onChange={(e) => onChange(e.target.value)} rows={3} className="w-full px-4 py-3 text-sm border border-gray-300 focus:border-green-800 focus:ring-1 focus:ring-green-800 focus:outline-none" />
       ) : (

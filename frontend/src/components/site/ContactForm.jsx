@@ -60,7 +60,7 @@ export default function ContactForm({ settings }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5">
-            <div className="overline mb-4">Request A Quote</div>
+            <div className="eyebrow mb-4">Request A Quote</div>
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
               Let&apos;s do <span className="text-green-800">business</span> together.
             </h2>
@@ -100,7 +100,7 @@ export default function ContactForm({ settings }) {
               <Select label="Order Type" value={form.order_type} onChange={onChange("order_type")} testId="input-order-type" options={ORDER_TYPES} />
             </div>
             <div>
-              <label className="overline mb-2 block">Your Requirements *</label>
+              <label className="eyebrow mb-2 block">Your Requirements *</label>
               <textarea
                 data-testid="input-message"
                 value={form.message}
@@ -130,7 +130,7 @@ export default function ContactForm({ settings }) {
 function Field({ label, value, onChange, type = "text", testId, required }) {
   return (
     <div>
-      <label className="overline mb-2 block">{label}</label>
+      <label className="eyebrow mb-2 block">{label}</label>
       <input
         type={type}
         value={value}
@@ -146,7 +146,7 @@ function Field({ label, value, onChange, type = "text", testId, required }) {
 function Select({ label, value, onChange, options, testId }) {
   return (
     <div>
-      <label className="overline mb-2 block">{label}</label>
+      <label className="eyebrow mb-2 block">{label}</label>
       <select
         value={value}
         onChange={onChange}
@@ -165,7 +165,7 @@ function Select({ label, value, onChange, options, testId }) {
 function ContactRow({ k, v }) {
   return (
     <div className="py-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-start sm:gap-6">
-      <div className="overline sm:w-48 flex-shrink-0 mb-1 sm:mb-0">{k}</div>
+      <div className="eyebrow sm:w-48 flex-shrink-0 mb-1 sm:mb-0">{k}</div>
       <div className="text-sm text-gray-800 leading-relaxed">{v}</div>
     </div>
   );
