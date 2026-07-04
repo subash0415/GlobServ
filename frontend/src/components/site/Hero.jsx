@@ -12,21 +12,18 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="h-px w-10 bg-green-800" />
-              <span className="overline">Ranipet, Tamil Nadu · India</span>
-            </div>
+            <span className="overline">Ranipet, Tamil Nadu · India</span>
             <h1
               data-testid="hero-title"
-              className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.02] text-gray-900"
+              className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.02] text-gray-900"
             >
-              Spirulina, Aloe Vera <br className="hidden sm:block" />
-              & Vetiver Roots.
+              Bringing the goodness of
               <br />
-              <span className="text-green-800">Sourced Direct. Exported Right.</span>
+              South India to the
+              <span className="text-green-800"> world.</span>
             </h1>
             <p className="mt-8 text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl">
-              GlobServ International Traders LLP is a focused agricultural exporter from Ranipet, Tamil Nadu — built around three core products we understand end-to-end. Basmati 1121, Chilli and Turmeric are available as optional add-ons for buyers seeking a single Indian sourcing partner.
+              GlobServ International Traders LLP is an agricultural export enterprise from Ranipet, Tamil Nadu — built on honesty, consistency and care. We work directly with farmers to bring authentic Indian produce to buyers across the globe.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-3">

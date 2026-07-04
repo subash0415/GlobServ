@@ -1,0 +1,28 @@
+{
+  "summary": "Iteration 2 targeted tests: hero copy update, decorative line removal, About narrative rewrite, and Vetiver + Basmati product image fixes. All checks passed. Backend regression (products, inquiries, admin login, admin inquiries) also green.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "tests_performed": [
+    "GET /api/products -> 6 products; vetiver.image_url == new Unsplash photo-1615485500704; basmati-1121.image_url == new Unsplash photo-1586201375761; no product still references pexels-photo-17507324 or pexels-photo-36346840",
+    "HEAD/GET on both new Unsplash image URLs -> HTTP 200",
+    "POST /api/inquiries public -> 200 with id",
+    "POST /api/auth/login with admin@globservinternational.com / 6379348863 -> 200 + access_token cookie",
+    "GET /api/admin/inquiries with cookie -> 200 list",
+    "Hero title (normalized): 'Bringing the goodness of South India to the world.' — contains 'goodness of South India', absent 'Spirulina, Aloe Vera' / 'Vetiver Roots' / 'Sourced Direct' / 'Exported Right'",
+    "No element matching 'div.h-px.w-10.bg-green-800' inside hero-section (accent line removed)",
+    "About section contains 'Two friends, one idea', 'God-blessed lands of Tamil Nadu', 'Vetiver (Khus)'",
+    "product-card-vetiver <img src> is the new Unsplash URL; click opens product-detail-panel"
+  ],
+  "note_on_hero_phrase_check": "Hero H1 contains a <br/> between 'of' and 'South India'. Playwright inner_text yields 'goodness of\\nSouth India' — visually the phrase is intact and reads correctly; a raw case-sensitive substring match without whitespace normalization would appear to fail, but the requirement is semantically satisfied. Verified after collapsing whitespace.",
+  "test_report_links": [
+    "/app/backend/tests/iteration2_test.py",
+    "/app/test_reports/pytest/iter2.xml"
+  ],
+  "action_items": [],
+  "updated_files": ["/app/backend/tests/iteration2_test.py"],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "seed_data_creation": "One TEST_QA_iter2 inquiry posted during regression",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Iteration 2 changes verified end-to-end. New iter2_test.py can be re-used for regression. Existing iteration_1 pass conditions still hold."
+}

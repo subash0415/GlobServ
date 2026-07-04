@@ -415,7 +415,7 @@ DEFAULT_PRODUCTS = [
         "tagline": "Sun-Dried Roots",
         "description": "Sun-dried Khus (Vetiver) roots, sourced from South India and valued globally for their fragrance in perfumery, essential oils, mats and traditional cooling applications.",
         "origin": "South India",
-        "image_url": "https://images.pexels.com/photos/17507324/pexels-photo-17507324.jpeg",
+        "image_url": "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=1600&q=80",
         "moq": "500 kg",
         "specs": [
             {"key": "Form", "value": "Dried Roots (whole)"},
@@ -441,7 +441,7 @@ DEFAULT_PRODUCTS = [
         "tagline": "Extra-Long Grain",
         "description": "Extra-long grain Pusa Basmati 1121, available as an optional addition alongside our core export range. Aged and sortex-cleaned for consistent grain length.",
         "origin": "North India",
-        "image_url": "https://images.pexels.com/photos/36346840/pexels-photo-36346840.jpeg",
+        "image_url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=1600&q=80",
         "moq": "20 MT",
         "specs": [
             {"key": "Variety", "value": "Pusa Basmati 1121"},
