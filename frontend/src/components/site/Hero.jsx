@@ -51,10 +51,6 @@ export default function Hero() {
                 <StatCell k="Entity" v="LLP" borderLeft />
               </div>
               <div className="grid grid-cols-2">
-                <StatCell k="Core Products" v="03" />
-                <StatCell k="Optional" v="03" borderLeft />
-              </div>
-              <div className="grid grid-cols-2">
                 <StatCell k="Model" v="B2B / Bulk" />
                 <StatCell k="Origin" v="Tamil Nadu" borderLeft />
               </div>
