@@ -39,13 +39,11 @@ export default function Navbar() {
             className="flex items-center gap-3"
             data-testid="brand-logo"
           >
-            <div className="w-9 h-9 border border-gray-900 flex items-center justify-center">
-              <span className="font-mono text-[13px] font-bold tracking-tighter text-gray-900">GS</span>
-            </div>
-            <div className="text-left leading-tight">
-              <div className="text-[15px] font-bold text-gray-900 tracking-tight">GlobServ International</div>
-              <div className="text-[10px] font-mono uppercase tracking-[0.18em] text-gray-500">Traders LLP · Ranipet, TN</div>
-            </div>
+            <img
+              src="https://customer-assets.emergentagent.com/job_agro-trade-portal-3/artifacts/7yctdp0f_GlobServ%20Logo.png"
+              alt="GlobServ International Traders LLP"
+              className="h-10 lg:h-12 w-auto object-contain"
+            />
           </button>
 
           <nav className="hidden lg:flex items-center gap-8">
