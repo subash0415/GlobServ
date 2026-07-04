@@ -32,7 +32,7 @@ export default function Navbar() {
       className={`sticky top-0 z-50 bg-white border-b ${scrolled ? "border-gray-300" : "border-gray-200"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-28 lg:h-32">
+        <div className="flex items-center justify-between h-32 lg:h-40">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-3"
@@ -41,7 +41,7 @@ export default function Navbar() {
             <img
               src="https://customer-assets.emergentagent.com/job_agro-trade-portal-3/artifacts/7yctdp0f_GlobServ%20Logo.png"
               alt="GlobServ"
-              className="h-20 lg:h-24 w-auto object-contain"
+              className="h-24 lg:h-32 w-auto object-contain"
             />
             <div className="text-left leading-tight hidden sm:block">
               <div className="text-[15px] font-bold text-gray-900 tracking-tight">GlobServ International</div>
