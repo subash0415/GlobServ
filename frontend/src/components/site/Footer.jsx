@@ -12,7 +12,7 @@ export default function Footer({ settings }) {
               <div className="text-[10px] font-mono uppercase tracking-[0.18em] text-gray-500 mt-1">Traders LLP</div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed max-w-md">
-              A registered LLP exporting Spirulina, Aloe Vera and Khus (Vetiver) roots from Tamil Nadu — with Basmati 1121, Chilli and Turmeric available on request.
+              From Tamil Nadu&apos;s fertile lands to customers worldwide, GlobServ is committed to delivering quality products, transparent sourcing, and partnerships built to last.
             </p>
           </div>
 
