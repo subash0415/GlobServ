@@ -29,7 +29,7 @@ export default function Products({ products = [] }) {
           <div className="max-w-2xl">
             <div className="eyebrow mb-4">Our Catalog</div>
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
-              A focused export range with <span className="text-green-800">technical depth</span>.
+              Premium agricultural products backed by <span className="text-green-800">technical expertise</span>
             </h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
               Spirulina, Aloe Vera and Khus (Vetiver) roots are our core export focus. Select any product to view technical specifications and packaging options.
