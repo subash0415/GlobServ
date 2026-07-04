@@ -6,9 +6,11 @@ export default function About() {
           <div className="lg:col-span-4">
             <span className="eyebrow">Who We Are</span>
             <h2 className="mt-4 text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
-              Two friends. One idea.
+              Two Friends
               <br />
-              <span className="text-green-800">A shared vision.</span>
+              One Idea
+              <br />
+              <span className="text-green-800">A Shared Dream</span>
             </h2>
           </div>
           <div className="lg:col-span-8 space-y-6 text-gray-700 leading-relaxed">
