@@ -1,0 +1,36 @@
+{
+  "summary": "First-finish smoke tests for GlobServ B2B export site. Backend endpoints (public + auth + admin) verified via curl; frontend home + inquiry submission + product detail panel + admin login + dashboard tabs verified via Playwright. All core flows green.",
+  "tested_scope": ["backend", "frontend", "auth", "integration"],
+  "passed": [
+    "GET /api/health -> 200",
+    "GET /api/products -> 6 seeded products (Spirulina, Aloe Vera, Khus (Vetiver) Roots, Basmati 1121 Rice, Chilli, Turmeric)",
+    "GET /api/settings -> whatsapp_number, business_email, business_tagline, address present",
+    "POST /api/inquiries valid -> 200 with id + created_at",
+    "POST /api/inquiries missing required fields -> 422",
+    "POST /api/auth/login (admin creds) -> 200, user object + bearer token + access_token httpOnly cookie set",
+    "POST /api/auth/login wrong password -> 401",
+    "GET /api/auth/me without cookie -> 401; with cookie -> admin user",
+    "GET /api/admin/inquiries without auth -> 401; with cookie -> list returned (2 items)",
+    "DELETE /api/admin/inquiries/{id} with auth -> 200",
+    "PUT /api/admin/settings with full body -> 200; GET /api/settings reflects updated tagline",
+    "Home page loads with navbar, hero, products, inquiry form, footer",
+    "product-card-spirulina click opens product-detail-panel",
+    "Inquiry form submission (input-name, input-email, input-message, submit-inquiry) shows success toast: 'Enquiry received - we will respond within 24 hours.'",
+    "/admin unauthenticated shows admin-login-form; login with admin credentials reveals admin-tab-inquiries, admin-tab-products, admin-tab-settings",
+    "Submitted 'QA Bot' inquiry appears in admin dashboard Inquiries tab after login"
+  ],
+  "failed": [
+    {
+      "area": "backend - PUT /api/admin/settings",
+      "issue": "Endpoint requires ALL settings fields (whatsapp_number, business_email, business_tagline, address) in request body; partial updates return 422. Not a bug per Pydantic schema, but worth noting for admin UI - Settings tab must send full object.",
+      "evidence": "PUT with only {business_tagline: ...} -> 422 'Field required' for whatsapp_number, etc. Full body -> 200.",
+      "priority": "LOW"
+    }
+  ],
+  "action_items": [
+    "Confirm Admin Settings tab in frontend submits the complete settings object (all 4 fields) on save to avoid 422s. Not verified end-to-end in this pass."
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}
