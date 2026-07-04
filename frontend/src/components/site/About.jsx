@@ -23,25 +23,9 @@ export default function About() {
             <p>
               We believe that every product we export represents not only our company, but also the farmers, communities, and traditions behind it. From Spirulina, Aloe Vera, and Vetiver (Khus) to Basmati Rice (1121), Chillies, Turmeric, and other agricultural products, we are committed to building lasting relationships with buyers who value quality, reliability, and transparent sourcing from India.
             </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border-l border-t border-gray-200 mt-10">
-              <Value k="Founders" v="Subash Saravanan & Madan Vignesh — leading sourcing, quality and export operations directly." />
-              <Value k="Founded" v="April 2026 · Registered LLP in Ranipet, Tamil Nadu — fully compliant export entity." />
-              <Value k="Direct Sourcing" v="Working with farmers and cultivators end-to-end, no layers of subcontracting." />
-              <Value k="Transparent Pricing" v="Straightforward quotes based on quantity, grade and destination." />
-            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function Value({ k, v }) {
-  return (
-    <div className="border-r border-b border-gray-200 p-6">
-      <div className="eyebrow mb-2 text-gray-900">{k}</div>
-      <p className="text-sm text-gray-600 leading-relaxed">{v}</p>
-    </div>
   );
 }

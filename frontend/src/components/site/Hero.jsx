@@ -17,13 +17,12 @@ export default function Hero() {
               data-testid="hero-title"
               className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.02] text-gray-900"
             >
-              Bringing the goodness of
+              Quality from South India,
               <br />
-              South India to the
-              <span className="text-green-800"> world.</span>
+              <span className="text-green-800">delivered globally</span>
             </h1>
             <p className="mt-8 text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl">
-              GlobServ International Traders LLP is an agricultural export enterprise from Ranipet, Tamil Nadu — built on honesty, consistency and care. We work directly with farmers to bring authentic Indian produce to buyers across the globe.
+              GlobServ International Traders LLP is an agricultural export enterprise from Ranipet, Tamil Nadu, driven by a commitment to honesty, consistency, and care. By working directly with farmers and producers, we bring authentic Indian products to global markets. Every shipment we deliver carries not only the quality of our products, but also the trust, heritage, and agricultural excellence of South India.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
