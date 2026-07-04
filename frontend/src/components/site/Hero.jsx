@@ -15,11 +15,12 @@ export default function Hero() {
             <span className="eyebrow">Ranipet, Tamil Nadu · India</span>
             <h1
               data-testid="hero-title"
-              className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.02] text-gray-900"
+              className="mt-6 font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900"
+              style={{ fontFamily: '"Playfair Display", serif', lineHeight: 1.15 }}
             >
               Quality from South India,
               <br />
-              <span className="text-green-800">delivered globally</span>
+              <span className="text-green-800 italic">delivered globally</span>
             </h1>
             <p className="mt-8 text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl">
               GlobServ International Traders LLP is an agricultural export enterprise from Ranipet, Tamil Nadu, driven by a commitment to honesty, consistency, and care. By working directly with farmers and producers, we bring authentic Indian products to global markets. Every shipment we deliver carries not only the quality of our products, but also the trust, heritage, and agricultural excellence of South India.
