@@ -246,7 +246,7 @@ async def get_settings():
     if not doc:
         return {
             "whatsapp_number": "+91 95852 18525",
-            "business_email": "globservtraders@gmail.com",
+            "business_email": "globservinternational@gmail.com",
             "business_tagline": "Specialist Agri Exporters from Ranipet, Tamil Nadu",
             "address": "No.171/2C1A, Abdullapuram, Ranipet, Tamil Nadu — 631102",
         }

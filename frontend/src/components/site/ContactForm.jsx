@@ -71,7 +71,7 @@ export default function ContactForm({ settings }) {
             <div className="mt-10 border-t border-gray-300">
               <ContactRow k="Registered Address" v={s.address || "No.171/2C1A, Abdullapuram, Ranipet, Tamil Nadu — 631102"} />
               <ContactRow k="WhatsApp / Phone" v={s.whatsapp_number || "+91 95852 18525"} />
-              <ContactRow k="Email" v={s.business_email || "globservtraders@gmail.com"} />
+              <ContactRow k="Email" v={s.business_email || "globservinternational@gmail.com"} />
               <ContactRow k="Entity" v="GlobServ International Traders LLP" />
             </div>
 

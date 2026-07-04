@@ -32,7 +32,7 @@ export default function Footer({ settings }) {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>{s.address || "No.171/2C1A, Abdullapuram, Ranipet, Tamil Nadu — 631102"}</li>
               <li className="font-mono text-white">{s.whatsapp_number || "+91 95852 18525"}</li>
-              <li className="font-mono text-white break-all">{s.business_email || "globservtraders@gmail.com"}</li>
+              <li className="font-mono text-white break-all">{s.business_email || "globservinternational@gmail.com"}</li>
             </ul>
           </div>
         </div>
