@@ -65,7 +65,7 @@ export default function ContactForm({ settings }) {
               Let&apos;s do <span className="text-green-800">business</span> together.
             </h2>
             <p className="mt-6 text-gray-600 leading-relaxed">
-              Whether you are an importer, a domestic wholesaler or a retail buyer — share your requirement and we will respond within 24 hours.
+              Whether you are an international importer, distributor, wholesaler, or retail buyer, share your requirements with us and we will respond within 24 hours.
             </p>
 
             <div className="mt-10 border-t border-gray-300">
