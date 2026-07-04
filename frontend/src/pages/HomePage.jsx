@@ -5,7 +5,6 @@ import Hero from "@/components/site/Hero";
 import About from "@/components/site/About";
 import Products from "@/components/site/Products";
 import Process from "@/components/site/Process";
-import Packaging from "@/components/site/Packaging";
 import Certifications from "@/components/site/Certifications";
 import ContactForm from "@/components/site/ContactForm";
 import Footer from "@/components/site/Footer";
@@ -28,7 +27,6 @@ export default function HomePage() {
       <About />
       <Products products={products} />
       <Process />
-      <Packaging />
       <Certifications />
       <ContactForm settings={settings} />
       <Footer settings={settings} />
