@@ -4,7 +4,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-4">
-            <div className="overline mb-4">01 · Who We Are</div>
+            <div className="overline mb-4">Who We Are</div>
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
               Rooted in Tamil Nadu.
               <br />

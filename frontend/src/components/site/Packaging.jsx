@@ -4,7 +4,7 @@ export default function Packaging() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-5">
-            <div className="overline mb-4">04 · Export Capabilities</div>
+            <div className="overline mb-4">Export Capabilities</div>
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
               Packaging, container loading & <span className="text-green-800">port logistics</span>.
             </h2>

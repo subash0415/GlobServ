@@ -13,7 +13,7 @@ export default function Process() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
           <div className="max-w-2xl">
-            <div className="overline mb-4">03 · How We Work</div>
+            <div className="overline mb-4">How We Work</div>
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
               From enquiry to <span className="text-green-800">delivery</span>.
             </h2>

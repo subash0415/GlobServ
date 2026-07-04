@@ -14,7 +14,7 @@ export default function Certifications() {
     <section id="certifications" data-testid="certifications-section" className="bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="max-w-2xl mb-12">
-          <div className="overline mb-4">05 · Registrations & Compliance</div>
+          <div className="overline mb-4">Registrations & Compliance</div>
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
             Regulatory & compliance <span className="text-green-800">footprint</span>.
           </h2>
