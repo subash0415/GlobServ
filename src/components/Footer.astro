@@ -1,0 +1,66 @@
+---
+const year = new Date().getFullYear();
+
+const products = [
+  "Spirulina",
+  "Aloe Vera",
+  "Vetiver Roots",
+  "Basmati 1121",
+  "Chilli · Turmeric",
+];
+
+const meta = [
+  { key: "LLPIN", value: "ACX-1145" },
+  { key: "GSTIN", value: "33ABEFG5227A1Z0" },
+  { key: "PAN", value: "ABEFG5227A" },
+  { key: "Founded", value: "April 2026" },
+];
+---
+
+<footer class="bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="mb-6">
+          <div class="text-white text-xl font-bold tracking-tight font-[Chivo]">GlobServ International</div>
+          <div class="text-[10px] font-mono uppercase tracking-[0.18em] text-gray-500 mt-1">Traders LLP</div>
+        </div>
+        <p class="text-sm text-gray-400 leading-relaxed max-w-md">
+          From Tamil Nadu&apos;s fertile lands to customers worldwide, GlobServ is committed to delivering
+          quality products, transparent sourcing, and partnerships built to last.
+        </p>
+      </div>
+
+      <div>
+        <div class="eyebrow text-gray-500 mb-4">Products</div>
+        <ul class="space-y-2 text-sm">
+          {products.map((p) => (
+            <li><a href="#products" class="hover:text-white transition-colors">{p}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <div class="eyebrow text-gray-500 mb-4">Contact</div>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li>No.171/2C1A, Abdullapuram, Ranipet, Tamil Nadu — 631102</li>
+          <li class="font-mono text-white">+91 95852 18525</li>
+          <li class="font-mono text-white break-all">globservinternational@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-[11px] font-mono">
+      {meta.map((m) => (
+        <div>
+          <div class="text-gray-500 uppercase tracking-widest">{m.key}</div>
+          <div class="text-white mt-1">{m.value}</div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs text-gray-500">
+      <div>&copy; {year} GlobServ International Traders LLP. All rights reserved.</div>
+    </div>
+  </div>
+</footer>

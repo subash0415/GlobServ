@@ -1,0 +1,87 @@
+---
+const nav = [
+  { id: "about", label: "About" },
+  { id: "products", label: "Products" },
+  { id: "process", label: "Process" },
+  { id: "certifications", label: "Certifications" },
+  { id: "contact", label: "Contact" },
+];
+---
+
+<header id="navbar" class="sticky top-0 z-50 bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-40 lg:h-48">
+      <a href="#" class="flex items-center gap-3">
+        <img
+          src="https://customer-assets.emergentagent.com/job_agro-trade-portal-3/artifacts/7yctdp0f_GlobServ%20Logo.png"
+          alt="GlobServ"
+          class="h-32 lg:h-40 w-auto object-contain"
+        />
+        <div class="text-left leading-tight hidden sm:block">
+          <div class="text-[15px] font-bold text-gray-900 tracking-tight font-[Chivo]">GlobServ International</div>
+          <div class="text-[10px] font-mono uppercase tracking-[0.18em] text-gray-500">Traders LLP</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8">
+        {nav.map((n) => (
+          <a
+            href={`#${n.id}`}
+            class="text-[13px] font-medium text-gray-700 hover:text-green-800 transition-colors uppercase tracking-wider link-underline"
+          >
+            {n.label}
+          </a>
+        ))}
+        <a
+          href="#contact"
+          class="bg-green-800 hover:bg-green-900 text-white px-5 py-2.5 text-[13px] font-semibold uppercase tracking-wider transition-colors"
+        >
+          Request Quote
+        </a>
+      </nav>
+
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden p-2 border border-gray-300"
+        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+        aria-label="Toggle menu"
+      >
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden border-t border-gray-200 bg-white hidden">
+    <div class="px-4 py-4 space-y-1">
+      {nav.map((n) => (
+        <a
+          href={`#${n.id}`}
+          class="block w-full text-left py-3 px-2 text-sm font-medium text-gray-700 uppercase tracking-wider border-b border-gray-100"
+        >
+          {n.label}
+        </a>
+      ))}
+      <a
+        href="#contact"
+        class="block w-full bg-green-800 text-white px-4 py-3 mt-3 text-sm font-semibold uppercase tracking-wider text-center"
+      >
+        Request Quote
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 8) {
+      navbar?.classList.remove('border-gray-200');
+      navbar?.classList.add('border-gray-300');
+    } else {
+      navbar?.classList.remove('border-gray-300');
+      navbar?.classList.add('border-gray-200');
+    }
+  });
+</script>

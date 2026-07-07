@@ -1,0 +1,48 @@
+---
+const certs = [
+  { label: "LLP Registration", icon: "building" },
+  { label: "GST Registration", icon: "file-check" },
+  { label: "Import Export Code (IEC)", icon: "globe" },
+  { label: "FSSAI License", icon: "shield" },
+  { label: "APEDA Registration", icon: "package" },
+  { label: "RCMC Registration", icon: "clipboard" },
+  { label: "Letter of Undertaking (LUT)", icon: "file-signature" },
+  { label: "ICEGATE Registration", icon: "ship" },
+];
+
+const icons: Record<string, string> = {
+  building: `<svg class="h-6 w-6 text-green-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M3 10h18M3 7l9-4 9 4M3 10v11h18V10"/></svg>`,
+  "file-check": `<svg class="h-6 w-6 text-green-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+  globe: `<svg class="h-6 w-6 text-green-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>`,
+  shield: `<svg class="h-6 w-6 text-green-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+  package: `<svg class="h-6 w-6 text-green-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>`,
+  clipboard: `<svg class="h-6 w-6 text-green-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>`,
+  "file-signature": `<svg class="h-6 w-6 text-green-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25"><path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.62 8.089l-2.773-.773M14.5 13.5l-2.888 1.112"/></svg>`,
+  ship: `<svg class="h-6 w-6 text-green-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`,
+};
+---
+
+<section id="certifications" class="bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+    <div class="max-w-2xl mb-16">
+      <div class="eyebrow mb-4">Compliance</div>
+      <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
+        Registrations &amp; Compliance
+      </h2>
+    </div>
+
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-10">
+      {certs.map((c) => (
+        <li class="flex items-start gap-4">
+          <Fragment set:html={icons[c.icon]} />
+          <span class="text-[15px] text-gray-900 leading-snug">{c.label}</span>
+        </li>
+      ))}
+    </ul>
+
+    <p class="mt-20 pt-8 border-t border-gray-200 text-sm text-gray-500 leading-relaxed max-w-3xl">
+      Supporting business and regulatory documentation can be provided to qualified buyers upon request
+      during the due diligence process.
+    </p>
+  </div>
+</section>

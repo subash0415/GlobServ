@@ -1,0 +1,140 @@
+---
+const productOptions = [
+  "Spirulina",
+  "Aloe Vera",
+  "Khus (Vetiver) Roots",
+  "Basmati 1121 Rice",
+  "Chilli",
+  "Turmeric",
+  "Other / Multiple",
+];
+
+const orderTypes = [
+  "Export / International",
+  "Domestic Wholesale",
+  "Retail / Small Qty",
+  "Sample Request",
+];
+
+const whatsappLink = "https://wa.me/919585218525?text=Hello%20GlobServ%20%E2%80%94%20I%20would%20like%20to%20enquire%20about%20your%20agricultural%20exports.";
+---
+
+<section id="contact" class="bg-gray-50 border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-5">
+        <div class="eyebrow mb-4">Request A Quote</div>
+        <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
+          Let&apos;s do <span class="text-green-800">business</span> together.
+        </h2>
+        <p class="mt-6 text-gray-600 leading-relaxed">
+          Whether you are an international importer, distributor, wholesaler, or retail buyer,
+          share your requirements with us and we will respond within 24 hours.
+        </p>
+
+        <div class="mt-10 border-t border-gray-300">
+          <div class="py-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-start sm:gap-6">
+            <div class="eyebrow sm:w-48 flex-shrink-0 mb-1 sm:mb-0">Registered Address</div>
+            <div class="text-sm text-gray-800 leading-relaxed">No.171/2C1A, Abdullapuram, Ranipet, Tamil Nadu — 631102</div>
+          </div>
+          <div class="py-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-start sm:gap-6">
+            <div class="eyebrow sm:w-48 flex-shrink-0 mb-1 sm:mb-0">WhatsApp / Phone</div>
+            <div class="text-sm text-gray-800 leading-relaxed">+91 95852 18525</div>
+          </div>
+          <div class="py-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-start sm:gap-6">
+            <div class="eyebrow sm:w-48 flex-shrink-0 mb-1 sm:mb-0">Email</div>
+            <div class="text-sm text-gray-800 leading-relaxed">globservinternational@gmail.com</div>
+          </div>
+          <div class="py-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-start sm:gap-6">
+            <div class="eyebrow sm:w-48 flex-shrink-0 mb-1 sm:mb-0">Entity</div>
+            <div class="text-sm text-gray-800 leading-relaxed">GlobServ International Traders LLP</div>
+          </div>
+        </div>
+
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-flex items-center gap-2 bg-gray-900 hover:bg-green-800 text-white px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.15em] transition-colors"
+        >
+          Chat on WhatsApp
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+      <form class="lg:col-span-7 bg-white border border-gray-300 p-6 sm:p-8 space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="eyebrow mb-2 block">Your Name *</label>
+            <input type="text" required class="w-full px-4 py-3 text-sm bg-white border border-gray-300 focus:border-green-800 focus:ring-1 focus:ring-green-800 focus:outline-none text-gray-900 placeholder-gray-400" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="eyebrow mb-2 block">Company / Organisation</label>
+            <input type="text" class="w-full px-4 py-3 text-sm bg-white border border-gray-300 focus:border-green-800 focus:ring-1 focus:ring-green-800 focus:outline-none text-gray-900 placeholder-gray-400" placeholder="Company name" />
+          </div>
+          <div>
+            <label class="eyebrow mb-2 block">Email Address *</label>
+            <input type="email" required class="w-full px-4 py-3 text-sm bg-white border border-gray-300 focus:border-green-800 focus:ring-1 focus:ring-green-800 focus:outline-none text-gray-900 placeholder-gray-400" placeholder="email@example.com" />
+          </div>
+          <div>
+            <label class="eyebrow mb-2 block">Phone / WhatsApp</label>
+            <input type="text" class="w-full px-4 py-3 text-sm bg-white border border-gray-300 focus:border-green-800 focus:ring-1 focus:ring-green-800 focus:outline-none text-gray-900 placeholder-gray-400" placeholder="+91 ..." />
+          </div>
+          <div>
+            <label class="eyebrow mb-2 block">Product Interested In</label>
+            <select class="w-full px-4 py-3 text-sm bg-white border border-gray-300 focus:border-green-800 focus:ring-1 focus:ring-green-800 focus:outline-none text-gray-900">
+              <option value="">— Select —</option>
+              {productOptions.map((p) => <option>{p}</option>)}
+            </select>
+          </div>
+          <div>
+            <label class="eyebrow mb-2 block">Order Type</label>
+            <select class="w-full px-4 py-3 text-sm bg-white border border-gray-300 focus:border-green-800 focus:ring-1 focus:ring-green-800 focus:outline-none text-gray-900">
+              <option value="">— Select —</option>
+              {orderTypes.map((t) => <option>{t}</option>)}
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="eyebrow mb-2 block">Your Requirements *</label>
+          <textarea
+            required
+            rows="5"
+            placeholder="Quantity, destination port, grade, packaging preference, timeline..."
+            class="w-full px-4 py-3 text-sm bg-white border border-gray-300 focus:border-green-800 focus:ring-1 focus:ring-green-800 focus:outline-none text-gray-900 placeholder-gray-400"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-green-800 hover:bg-green-900 text-white px-8 py-4 text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors"
+        >
+          Send Enquiry
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.querySelector('#contact form');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(form as HTMLFormElement);
+    const name = fd.get('name') || '';
+    const email = fd.get('email') || '';
+    const company = fd.get('company') || '';
+    const phone = fd.get('phone') || '';
+    const product = fd.get('product') || '';
+    const orderType = fd.get('order_type') || '';
+    const message = fd.get('message') || '';
+
+    const subject = encodeURIComponent(`Enquiry from ${name} — GlobServ`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone}\nProduct: ${product}\nOrder Type: ${orderType}\n\nMessage:\n${message}`
+    );
+
+    window.location.href = `mailto:globservinternational@gmail.com?subject=${subject}&body=${body}`;
+  });
+</script>

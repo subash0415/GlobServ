@@ -1,0 +1,75 @@
+---
+const products = [
+  {
+    name: "Spirulina",
+    category: "core",
+    origin: "Tamil Nadu, India",
+    image: "https://images.pexels.com/photos/13787646/pexels-photo-13787646.jpeg",
+    description: "Cultivated and processed spirulina, available as dried powder or flakes. Grown under controlled conditions with consistent quality control for food, nutraceutical and feed applications.",
+  },
+  {
+    name: "Aloe Vera",
+    category: "core",
+    origin: "Tamil Nadu, India",
+    image: "https://images.pexels.com/photos/33793906/pexels-photo-33793906.jpeg",
+    description: "Fresh aloe vera leaves and processed aloe vera powder, produced from mature Barbadensis Miller plants. Suited for cosmetics, nutraceuticals and beverage applications.",
+  },
+  {
+    name: "Khus (Vetiver) Roots",
+    category: "core",
+    origin: "South India",
+    image: "https://customer-assets.emergentagent.com/job_agro-trade-portal-3/artifacts/25b0q6uu_image.png",
+    description: "Sun-dried Khus (Vetiver) roots, sourced from South India and valued globally for their fragrance in perfumery, essential oils, mats and traditional cooling applications.",
+  },
+  {
+    name: "Basmati 1121 Rice",
+    category: "optional",
+    origin: "North India",
+    image: "https://customer-assets.emergentagent.com/job_agro-trade-portal-3/artifacts/h3qlbnbu_image.png",
+    description: "Extra-long grain Pusa Basmati 1121, available as an optional addition alongside our core export range. Aged and sortex-cleaned for consistent grain length.",
+  },
+  {
+    name: "Chilli",
+    category: "optional",
+    origin: "South India",
+    image: "https://images.unsplash.com/photo-1602237514002-c2d8ae2da393?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxkcmllZCUyMHJlZCUyMGNoaWxsaXxlbnwwfHx8fDE3ODI3MjE0NzF8MA&ixlib=rb-4.1.0&q=85",
+    description: "Sun-dried whole red chilli and powdered chilli, available on request for buyers combining orders with our core products.",
+  },
+  {
+    name: "Turmeric",
+    category: "optional",
+    origin: "Erode, Tamil Nadu",
+    image: "https://images.pexels.com/photos/6220710/pexels-photo-6220710.jpeg",
+    description: "Erode turmeric — fingers and powder — known for high curcumin content. Available on request alongside our core export range.",
+  },
+];
+---
+
+<section id="products" class="bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="mb-12 max-w-3xl">
+      <div class="eyebrow mb-4">Our Catalog</div>
+      <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
+        Premium agricultural products backed by <span class="text-green-800">technical expertise</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-l border-t border-gray-200">
+      {products.map((p) => (
+        <div class="grid-cell text-left bg-white">
+          <div class="aspect-[4/3] overflow-hidden border-b border-gray-200 bg-gray-100">
+            <img src={p.image} alt={p.name} loading="lazy" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="eyebrow">{p.category === "core" ? "Core Export" : "Optional"}</span>
+              <span class="font-mono text-[11px] text-gray-500">{p.origin}</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 tracking-tight">{p.name}</h3>
+            <p class="mt-3 text-sm text-gray-600 leading-relaxed">{p.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

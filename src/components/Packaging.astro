@@ -1,0 +1,81 @@
+---
+const containerData = [
+  { product: "Spirulina Powder", fcl20: "~15 MT", hc40: "~22 MT", pkg: "25 kg drums" },
+  { product: "Aloe Vera Powder", fcl20: "~10 MT", hc40: "~18 MT", pkg: "25 kg fibre drums" },
+  { product: "Vetiver Roots", fcl20: "~5 MT", hc40: "~8 – 10 MT", pkg: "25 / 50 kg bales" },
+  { product: "Basmati 1121", fcl20: "~25 – 26 MT", hc40: "~28 MT", pkg: "PP / Jute 5–50 kg" },
+  { product: "Chilli (dry)", fcl20: "~14 MT", hc40: "~24 MT", pkg: "25 kg PP + liner" },
+  { product: "Turmeric", fcl20: "~18 MT", hc40: "~26 MT", pkg: "25 / 50 kg PP" },
+];
+
+const portInfo = [
+  { key: "Primary Port", value: "Chennai (INMAA)" },
+  { key: "Alternate", value: "Tuticorin (INTUT)" },
+  { key: "Airport", value: "Chennai (MAA)" },
+  { key: "Incoterms", value: "FOB · CIF · CFR" },
+  { key: "Payment", value: "30% Advance / TT" },
+  { key: "Lead Time", value: "15 – 30 Days" },
+];
+---
+
+<section class="bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <div class="lg:col-span-5">
+        <div class="eyebrow mb-4">Export Capabilities</div>
+        <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
+          Packaging, container loading & <span class="text-green-800">port logistics</span>.
+        </h2>
+        <p class="mt-6 text-gray-600 leading-relaxed">
+          We handle bulk, wholesale and private-label packaging sized to your order and destination market.
+          Documentation is prepared in line with our registrations and buyer requirements.
+        </p>
+        <div class="mt-8 border border-gray-200 overflow-hidden">
+          <img
+            src="https://images.pexels.com/photos/20581299/pexels-photo-20581299.jpeg"
+            alt="Container shipping"
+            loading="lazy"
+            class="w-full h-64 object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="border border-gray-300">
+          <div class="bg-gray-50 border-b border-gray-300 px-6 py-3">
+            <div class="eyebrow">Container Load Reference</div>
+          </div>
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th style="width:35%">Product</th>
+                <th style="width:20%">20' FCL</th>
+                <th style="width:20%">40' HC</th>
+                <th style="width:25%">Package</th>
+              </tr>
+            </thead>
+            <tbody>
+              {containerData.map((row) => (
+                <tr>
+                  <th>{row.product}</th>
+                  <td>{row.fcl20}</td>
+                  <td>{row.hc40}</td>
+                  <td>{row.pkg}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 border-l border-t border-gray-200">
+          {portInfo.map((item) => (
+            <div class="grid-cell p-5">
+              <div class="eyebrow mb-2">{item.key}</div>
+              <div class="font-mono text-sm font-semibold text-gray-900">{item.value}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
