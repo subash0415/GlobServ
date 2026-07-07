@@ -16,39 +16,62 @@ A single-page static website for GlobServ International Traders LLP, an agricult
 ```
 GlobServ/
 ├── .gitignore
-├── package.json                  # Dependencies and scripts
-├── astro.config.mjs              # Astro build config (Tailwind integration, static output)
-├── tailwind.config.mjs           # Tailwind theme (fonts, colors, brand tokens)
+├── .nojekyll                       # Disables Jekyll on GitHub Pages
+├── package.json                    # Dependencies and scripts
+├── astro.config.mjs                # Astro build config (Tailwind, relative base path)
+├── tailwind.config.mjs             # Tailwind theme (fonts, colors, brand tokens)
 │
-├── src/
+├── src/                            # Source files (not deployed)
 │   ├── pages/
-│   │   └── index.astro           # Entry point — assembles all components
-│   │
+│   │   └── index.astro             # Entry point — assembles all components
 │   ├── components/
-│   │   ├── Navbar.astro          # Sticky nav with mobile hamburger
-│   │   ├── Hero.astro            # Hero section with tagline + stats grid
-│   │   ├── About.astro           # Company story section
-│   │   ├── Products.astro        # Product catalog grid (6 products)
-│   │   ├── Packaging.astro       # Container load table + port logistics
-│   │   ├── Process.astro         # 6-step workflow grid
-│   │   ├── Certifications.astro  # Compliance registrations list
-│   │   ├── Contact.astro         # Inquiry form + contact details
-│   │   └── Footer.astro          # Site footer with meta info
-│   │
+│   │   ├── Navbar.astro            # Sticky nav with mobile hamburger
+│   │   ├── Hero.astro              # Hero section with tagline + stats grid
+│   │   ├── About.astro             # Company story section
+│   │   ├── Products.astro          # Product catalog grid (6 products)
+│   │   ├── Packaging.astro         # Container load table + port logistics
+│   │   ├── Process.astro           # 6-step workflow grid
+│   │   ├── Certifications.astro    # Compliance registrations list
+│   │   ├── Contact.astro           # Inquiry form + contact details
+│   │   └── Footer.astro            # Site footer with meta info
 │   ├── styles/
-│   │   └── global.css            # Base styles, typography, custom classes
-│   │
-│   └── env.d.ts                  # Astro type declarations
+│   │   └── global.css              # Base styles, typography, custom classes
+│   └── env.d.ts                    # Astro type declarations
 │
-├── public/                       # Static assets (if any)
+├── public/                         # Static assets source (copied to root on build)
+│   └── images/                     # All product/site images
+│       ├── logo.png
+│       ├── spirulina.jpg
+│       ├── aloe-vera.jpg
+│       ├── vetiver.jpg
+│       ├── basmati.jpg
+│       ├── chilli.jpg
+│       ├── turmeric.jpg
+│       └── container.jpg
 │
-├── build/                        # Committed build output (GitHub Pages source)
-│   ├── index.html                # Final static HTML (~33KB)
-│   └── assets/
-│       └── index.D0x702Rb.css   # Compiled Tailwind CSS
-│
-└── dist/                         # Astro default build output (gitignored)
+├── index.html                      # Built static HTML (~33KB)
+├── assets/                         # Built CSS (~8KB, Tailwind purged)
+│   └── index.*.css
+└── images/                         # Built images (copied from public/images/)
+    ├── logo.png
+    ├── spirulina.jpg
+    ├── aloe-vera.jpg
+    ├── vetiver.jpg
+    ├── basmati.jpg
+    ├── chilli.jpg
+    ├── turmeric.jpg
+    └── container.jpg
 ```
+
+### Build Process
+
+```
+src/ + public/ → npm run build → dist/ → copy to root → delete dist/
+```
+
+1. Astro builds `src/` and `public/` into `dist/`
+2. Contents of `dist/` are copied to repo root (`index.html`, `assets/`, `images/`)
+3. `dist/` is deleted — only root-level static files are committed
 
 ---
 
@@ -109,7 +132,7 @@ GlobServ/
 
 - **Position:** Sticky top, z-50
 - **Height:** 160px (mobile), 192px (lg)
-- **Left:** GlobServ logo (external image) + company name + "Traders LLP" subtitle
+- **Left:** GlobServ logo (local `images/logo.png`) + company name + "Traders LLP" subtitle
 - **Right (desktop):** About, Products, Process, Certifications, Contact links + "Request Quote" button (green-800)
 - **Mobile:** Hamburger menu toggles dropdown with same links
 - **Behavior:** Border darkens on scroll (gray-200 → gray-300)
@@ -138,14 +161,14 @@ GlobServ/
 - **Section header:** Eyebrow "Our Catalog" + headline with green accent
 - **6 product cards** (each a grid-cell):
 
-| # | Name | Category | Origin | Image Source |
-|---|------|----------|--------|--------------|
-| 1 | Spirulina | Core Export | Tamil Nadu, India | Pexels |
-| 2 | Aloe Vera | Core Export | Tamil Nadu, India | Pexels |
-| 3 | Khus (Vetiver) Roots | Core Export | South India | Emergent assets |
-| 4 | Basmati 1121 Rice | Optional | North India | Emergent assets |
-| 5 | Chilli | Optional | South India | Unsplash |
-| 6 | Turmeric | Optional | Erode, Tamil Nadu | Pexels |
+| # | Name | Category | Origin | Image File |
+|---|------|----------|--------|------------|
+| 1 | Spirulina | Core Export | Tamil Nadu, India | `images/spirulina.jpg` |
+| 2 | Aloe Vera | Core Export | Tamil Nadu, India | `images/aloe-vera.jpg` |
+| 3 | Khus (Vetiver) Roots | Core Export | South India | `images/vetiver.jpg` |
+| 4 | Basmati 1121 Rice | Optional | North India | `images/basmati.jpg` |
+| 5 | Chilli | Optional | South India | `images/chilli.jpg` |
+| 6 | Turmeric | Optional | Erode, Tamil Nadu | `images/turmeric.jpg` |
 
 - **Card structure:**
   - 4:3 aspect ratio image
@@ -156,7 +179,7 @@ GlobServ/
 ### 4.5 Packaging & Export Capabilities
 
 - **Layout:** 5/7 column grid
-- **Left:** Eyebrow "Export Capabilities" + headline + description + container ship image
+- **Left:** Eyebrow "Export Capabilities" + headline + description + container ship image (`images/container.jpg`)
 - **Right:**
   - **Container Load Reference table** (spec-table):
 
@@ -238,26 +261,36 @@ GlobServ/
 ### Commands
 
 ```bash
-npm install        # Install dependencies
-npm run dev        # Local dev server (http://localhost:4321)
-npm run build      # Static build → dist/
-npm run preview    # Preview production build
+npm install              # Install dependencies
+npm run dev              # Local dev server (http://localhost:4321)
+npm run build            # Static build → dist/ → copy to root
+```
+
+### Build & Deploy Script
+
+```bash
+rm -rf dist index.html assets
+npm run build
+cp dist/index.html ./index.html
+cp -r dist/assets ./assets
+rm -rf dist
 ```
 
 ### GitHub Pages Deployment
 
 1. Go to repo **Settings → Pages**
 2. Source: **Deploy from a branch**
-3. Branch: `static-site-modern`, folder: `/build`
+3. Branch: `static-site-modern`, folder: `/ (root)`
 4. Site will be available at `https://subash0415.github.io/GlobServ/`
 
 ### Output
 
 | File | Size |
 |------|------|
-| `build/index.html` | ~33KB |
-| `build/assets/index.*.css` | ~8KB (Tailwind, purged) |
-| **Total** | **~41KB** |
+| `index.html` | ~33KB |
+| `assets/index.*.css` | ~8KB (Tailwind, purged) |
+| `images/*` | ~15MB (8 images) |
+| **Total** | **~15MB** |
 
 Zero JavaScript in the final output (only inline scroll/form handlers in HTML).
 
